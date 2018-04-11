@@ -50,6 +50,7 @@ $('.$class').bootstrapSwitch({
                 _method: 'PUT'
             },
             success: function (data) {
+                $.pjax.reload('#pjax-container');
                 toastr.success(data.message);
             }
         });
